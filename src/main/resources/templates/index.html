@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link th:href="@{estilo.css}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
+    <title>game.log</title>
+</head>
+
+<body class="fundoprincipal">
+    <header>
+        <nav class="navbar navbar-expand-lg fundonav shadow-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img th:src="@{img/logogamelog.png}" alt="Logo" width="120px"
+                        class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#projetos">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <img th:src="@{img/entrarIcon.png}" href="#login" alt="Login/Cadastro" width="25px">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="background mt-6 pb-5">
+        <div class="d-flex justify-content-center mt-4 p-5">
+         <div class="card text-bg-dark border-0">
+            <img th:src="@{img/bannergamelog.png}"class="card-img rounded" alt="...">
+            <div class="card-img-overlay mt-4">
+                <img th:src="@{img/logogamelog.png}" alt="Logo" width="120px" class="ms-5">
+                <h3 class="card-text fw-bold mt-4 ms-5 display-6">Aplicativo web pra registro de jogos</h3>
+                  <p class="card-title ms-5">Depois de um tempo em desenvolvimento, o game.log finalmente está aqui!</p>
+                <button type="button" class="btn botao text-white fw-bold p-2 px-4 rounded-2 ms-5">
+                <small>SAIBA MAIS</small>
+                </button>
+            </div>
+            </div>
+        </div>
+            <article class="jogos-destaque">
+             <div class="hstack gap-3 d-flex justify-content-center">
+             <div class="card text-bg-dark border-0">
+            <img th:src="@{img/Banner1.png}"class="card-img rounded img-fluid" alt="...">
+            <div class="card-img-overlay mt-5">
+                <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
+                <p class="card-text fw-bold ms-4 display-6 titulo">Castlevania</p>
+                <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
+                <small>ADICIONAR</small>
+                </button>
+            </div>
+            </div>
+
+
+            <div class="card text-bg-dark border-0">
+            <img th:src="@{img/Banner2.png}" class="card-img rounded img-fluid" alt="...">
+            <div class="card-img-overlay mt-5">
+                <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
+                <p class="card-text fw-bold ms-4 display-6 titulo2">Marvel Tokon</p>
+                <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
+                <small>ADICIONAR</small>
+                </button>
+            </div>
+            </div>
+        </div>
+        </article>
+
+        <article class="em-breve">
+            <h2 class="text-white fw-bold fs-2 ms-5 mt-4">Em breve</h2>
+        </article>
+
+       </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
