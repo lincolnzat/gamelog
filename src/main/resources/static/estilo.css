@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 
 .body {
     font-family: OpenSans;
+}
+
+li, h2, h3, footer {
+    font-family: Lexend;
 }
 
 .fundoprincipal {
@@ -16,18 +22,14 @@
     background-color: #212629;
 }
 
-h1 {
-    font-family: Michroma;
-}
 
 .botao {
-    background-color: #ad0f3c !important;
+    background-color: #DC143C !important;
     border-radius: 0.9em;
     padding: 1em;
     transition: all ease-in-out 0.2s;
     font-size: 14px;
-    letter-spacing: 0.1em;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(90deg,rgba(220, 20, 60, 1) 0%, rgba(173, 15, 60, 1) 100%);
 }
 
 .botao:hover {
@@ -37,11 +39,13 @@ h1 {
 .titulo {
     text-shadow: 1px 1px 2px #ff5555;
     letter-spacing: -0.025em;
+    font-family: Lexend;
 }
 
 .titulo2 {
     text-shadow: 1px 1px 2px #3C5B9B;
     letter-spacing: -0.025em;
+    font-family: Lexend;
 
 }
 
@@ -52,4 +56,47 @@ h1 {
 
 .mt-6 {
     margin-top: 4rem !important;
+}
+
+
+.formzin {
+    background-color: #3b434a !important;
+}
+
+.fixed-img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+
+.em-breve img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.em-breve img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+.fundonav .nav-link.active {
+    border-bottom: 2px solid #DC143C;
+    padding-bottom: 4px;
+    color: #fff !important;
+}
+
+
+.fundonav .nav-link:not(.active):hover {
+    border-bottom: 2px solid rgba(255, 0, 0, 0.7);
+    padding-bottom: 4px;
+    transition: border-bottom 0.2s ease-in-out;
+}
+
+
+a {
+    text-decoration: none;
 }

@@ -13,29 +13,45 @@
 
 <body class="fundoprincipal">
     <header>
-        <nav class="navbar navbar-expand-lg fundonav shadow-lg">
+        <nav class="navbar navbar-expand-lg fundonav shadow-lg sticky-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img th:src="@{img/logogamelog.png}" alt="Logo" width="120px"
-                        class="d-inline-block align-text-top"></a>
+                <a class="navbar-brand" href="/index">
+                    <img th:src="@{img/logogamelog.png}" alt="Logo" width="120px" class="d-inline-block align-text-top">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" aria-current="page" href="#">Início</a>
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item active p-1">
+                        <img th:src="@{img/inicio.png}" alt="Ícone de ínicio" width="22px" height="22px">
+                            <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" aria-current="page" href="#">Início</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#sobre">Sobre</a>
+                        <li class="nav-item p-1">
+                        <img th:src="@{img/sobre.png}" alt="Sobre" width="22px" height="22px">
+                            <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Sobre</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#projetos">Cadastro</a>
+                        <li class="nav-item p-1">
+                        <img th:src="@{img/gamepad.png}" alt="Dashboad" width="22px" height="22px">
+                            <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <img th:src="@{img/entrarIcon.png}" href="#login" alt="Login/Cadastro" width="25px">
+                        <li class="nav-item p-1">
+                        <img th:src="@{img/apoiar.png}" alt="Apoie" width="22px" height="22px">
+                            <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Apoie</a>
                         </li>
                     </ul>
+
+                    <ul class="navbar-nav align-items-center gap-1">
+                        <li class="nav-item">
+                            <img th:src="@{img/entrarIcon.png}" alt="Ícone de ínicio" width="22px" height="22px">
+                                <a class="nav-link text-white d-inline-flex align-items-center text-nowrap gap-2" href="/login">Login</a>
+                            </a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </nav>
@@ -43,56 +59,83 @@
 
     <main>
         <section class="background mt-6 pb-5">
-        <div class="d-flex justify-content-center mt-4 p-5">
-         <div class="card text-bg-dark border-0">
-            <img th:src="@{img/bannergamelog.png}"class="card-img rounded" alt="...">
-            <div class="card-img-overlay mt-4">
-                <img th:src="@{img/logogamelog.png}" alt="Logo" width="120px" class="ms-5">
-                <h3 class="card-text fw-bold mt-4 ms-5 display-6">Aplicativo web pra registro de jogos</h3>
-                  <p class="card-title ms-5">Depois de um tempo em desenvolvimento, o game.log finalmente está aqui!</p>
-                <button type="button" class="btn botao text-white fw-bold p-2 px-4 rounded-2 ms-5">
-                <small>SAIBA MAIS</small>
-                </button>
+            <div class="d-flex justify-content-center mt-4 p-5">
+                <div class="card text-bg-dark border-0">
+                    <img th:src="@{img/bannergamelog.png}" class="card-img rounded" alt="...">
+                    <div class="card-img-overlay mt-4">
+                        <img th:src="@{img/logogamelog.png}" alt="Logo" width="120px" class="ms-0 ms-md-5">
+                        <h3 class="card-text fw-bold mt-4 ms-0 ms-md-5 display-6">Aplicativo web pra registro de jogos</h3>
+                        <p class="card-title ms-0 ms-md-5 fw-bold">Crie a sua conta, registre sua jogatina e descubra outros jogos!</p>
+                        <button type="button" class="btn botao text-white fw-bold p-2 px-4 rounded-2 ms-0 ms-md-5">
+                            <a href="/cadastro"><small class="text-white">CADASTRE-SE</small></a>
+                        </button>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
+
             <article class="jogos-destaque">
-             <div class="hstack gap-3 d-flex justify-content-center">
-             <div class="card text-bg-dark border-0">
-            <img th:src="@{img/Banner1.png}"class="card-img rounded img-fluid" alt="...">
-            <div class="card-img-overlay mt-5">
-                <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
-                <p class="card-text fw-bold ms-4 display-6 titulo">Castlevania</p>
-                <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
-                <small>ADICIONAR</small>
-                </button>
-            </div>
-            </div>
+                <h2 class="text-white fw-bold fs-1 text-center mt-2">DESTAQUES</h2>
+                <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+                    <div class="card text-bg-dark border-0">
+                        <img th:src="@{img/Banner1.png}" class="card-img rounded img-fluid" alt="...">
+                        <div class="card-img-overlay mt-5">
+                            <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
+                            <p class="card-text fw-bold ms-4 display-6 titulo">Castlevania</p>
+                            <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
+                                <small>VER MAIS</small>
+                            </button>
+                        </div>
+                    </div>
 
+                    <div class="card text-bg-dark border-0">
+                        <img th:src="@{img/Banner2.png}" class="card-img rounded img-fluid" alt="...">
+                        <div class="card-img-overlay mt-5">
+                            <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
+                            <p class="card-text fw-bold ms-4 display-6 titulo2">Marvel Tokon</p>
+                            <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
+                                <small>VER MAIS</small>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-            <div class="card text-bg-dark border-0">
-            <img th:src="@{img/Banner2.png}" class="card-img rounded img-fluid" alt="...">
-            <div class="card-img-overlay mt-5">
-                <small class="card-title mt-5 ms-5 fw-bold destaque">DESTAQUE DA SEMANA</small>
-                <p class="card-text fw-bold ms-4 display-6 titulo2">Marvel Tokon</p>
-                <button type="button" class="btn botao text-white fw-bold p-2 px-4 mt-2 ms-5 rounded-2">
-                <small>ADICIONAR</small>
-                </button>
-            </div>
-            </div>
-        </div>
-        </article>
+            <article class="em-breve">
+                <h2 class="text-white fw-bold fs-1 text-center mt-4">EM BREVE</h2>
+                <div class="d-flex flex-wrap gap-3 justify-content-center p-5 py-2">
+                    <img th:src="@{img/GTAVI.png}" class="card-img rounded img-fluid fixed-img w-100 w-md-25" style="max-width: 250px;" alt="GTA VI">
+                    <img th:src="@{img/onimusha.jpg}" class="card-img rounded img-fluid fixed-img w-100 w-md-25" style="max-width: 250px;" alt="Onimusha">
+                    <img th:src="@{img/Wolverine.jpeg}" class="card-img rounded img-fluid fixed-img w-100 w-md-25" style="max-width: 250px;" alt="Wolverine">
+                    <img th:src="@{img/clockworkrevolution.jpeg}" class="card-img rounded img-fluid fixed-img w-100 w-md-25" style="max-width: 250px;" alt="GTA VI">
+                </div>
+            </article>
 
-        <article class="em-breve">
-            <h2 class="text-white fw-bold fs-2 ms-5 mt-4">Em breve</h2>
-        </article>
+            <article class="patrocinadores">
+                <h2 class="text-white fw-bold fs-1 ms-5 mt-3 mb-2 text-center">NOSSOS PATROCINADORES</h2>
+                <div class="vstack gap-4">
+                    <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center">
+                        <img th:src="@{img/molochgames.png}" class="w-25 img-fluid w-25" alt="Moloch Games">
+                        <img th:src="@{img/Trenger.png}" class="w-25 img-fluid w-25" alt="Trenger du Rimelig">
+                        <img th:src="@{img/Esteroids.png}" class="w-25 img-fluid w-25" alt="Esteroids">
+                    </div>
 
-       </section>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center align-items-center">
+                        <img th:src="@{img/POJO.png}" class="w-25 img-fluid w-25" alt="Pojo">
+                        <img th:src="@{img/POPO.png}" class="w-25 img-fluid w-25" alt="Popo">
+                        <img th:src="@{img/POCO.png}" class="w-25 img-fluid w-25" alt="Poco">
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
 
-    <footer>
+        <footer class="bg-body-tertiary text-center text-lg-start">
 
-    </footer>
+    <div class="text-center p-3 fundonav text-white">
+        © 2026 Diabo Games
+    </div>
 
+        </footer>
 </body>
+
 </html>

@@ -26,21 +26,21 @@
 
                 <div class="collapse navbar-collapse" id="navbarNav">
 
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item active p-1">
-                        <img th:src="@{img/inicio.png}" alt="Ícone de ínicio" width="22px" height="22px">
+                        <img th:src="@{img/inicio.png}" alt="Ícone de ínicio" width="15px" height="15px">
                             <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" aria-current="page" href="#">Início</a>
                         </li>
                         <li class="nav-item p-1">
-                        <img th:src="@{img/sobre.png}" alt="Sobre" width="22px" height="22px">
+                        <img th:src="@{img/sobre.png}" alt="Sobre" width="15px" height="15px">
                             <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Sobre</a>
                         </li>
                         <li class="nav-item p-1">
-                        <img th:src="@{img/gamepad.png}" alt="Dashboard" width="22px" height="22px">
+                        <img th:src="@{img/gamepad.png}" alt="Dashboad" width="15px" height="15px">
                             <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Dashboard</a>
                         </li>
                         <li class="nav-item p-1">
-                        <img th:src="@{img/apoiar.png}" alt="Apoie" width="22px" height="22px">
+                        <img th:src="@{img/apoiar.png}" alt="Apoie" width="15px" height="15px">
                             <a class="nav-link text-white d-inline-flex align-items-center text-nowrap" href="#sobre">Apoie</a>
                         </li>
                     </ul>
@@ -48,8 +48,8 @@
                     <ul class="navbar-nav align-items-center gap-1">
                         <li class="nav-item">
                             <a href="#login">
-                            <img th:src="@{img/entrarIcon.png}" alt="Ícone de ínicio" width="22px" height="22px">
-                                <a class="nav-link text-white d-inline-flex align-items-center text-nowrap gap-2" href="#sobre">Login</a>
+                            <img th:src="@{img/entrarIcon.png}" alt="Ícone de ínicio" width="18px" height="18px">
+                                <a class="nav-link text-white d-inline-flex align-items-center text-nowrap gap-2" href="#sobre">Login/Cadastro</a>
                             </a>
                         </li>
                     </ul>
@@ -63,29 +63,30 @@
         <section class="background mt-6 pb-5 h-100">
         <img th:src="@{img/bannerreg.png}" class="card-img rounded w-25 mx-auto d-block" alt="...">
         <form class="w-25 text-white mx-auto mt-2 border-0" data-bs-theme="dark"
-        th:action="@{/cadastro}" th:object="${usuario}" method="POST">
+        th:action="@{/login}" method="POST">
 
-        <div class="mb-3">
-            <label for="nome" class="form-label fw-bold">Nome de usuário</label>
-            <input type="text" class="form-control form-control-sm" id="nome" th:field="*{nome}" required>
-        </div>
+        <div th:if="${erro}" class="alert alert-danger" th:text="${erro}"></div>
 
         <div class="mb-3">
             <label for="email" class="form-label fw-bold">E-mail</label>
-            <input type="email" class="form-control form-control-sm" id="email" th:field="*{email}" required>
+            <input type="email" class="form-control form-control-sm" name="email" required>
         </div>
 
         <div class="mb-3">
             <label for="senha" class="form-label fw-bold">Senha</label>
-            <input type="password" class="form-control form-control-sm" id="senha" th:field="*{senha}" required>
+            <input type="password" class="form-control form-control-sm" name="senha" required>
         </div>
 
-        <button type="submit" class="btn botao mx-auto text-white fw-bold p-2 px-4 mt-2 rounded-2">CADASTRAR</button>
+        <button type="submit" class="btn botao mx-auto text-white fw-bold p-2 px-4 mt-2 rounded-2">ENTRAR</button>
     </form>
        </section>
     </main>
 
-    <footer>
+    <footer class="bg-body-tertiary text-center text-lg-start">
+
+    <div class="text-center p-3 fundonav text-white">
+        © 2026 Diabo Games
+    </div>
 
     </footer>
 
