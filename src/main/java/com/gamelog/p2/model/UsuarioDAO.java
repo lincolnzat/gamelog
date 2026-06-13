@@ -26,7 +26,7 @@ public class UsuarioDAO {
     }
 
     public void inserirUsuario(Usuario usu) {
-        String sql = "INSERT INTO Usuario(nome,email,senha) VALUES (?,?,?)";
+        String sql = "INSERT INTO usuario(nome,email,senha) VALUES (?,?,?)";
         Object[] obj = new Object[3];
         obj[0] = usu.getNome();
         obj[1] = usu.getEmail();
