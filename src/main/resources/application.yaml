@@ -6,9 +6,9 @@ spring:
     active: prod
 
   datasource:
-    url: "${SPRING_DATASOURCE_URL}"
-    username: "${SPRING_DATASOURCE_USERNAME}"
-    password: "${SPRING_DATASOURCE_PASSWORD}"
+    url: "jdbc:postgresql://db.ingjkgihejitvnhxsdxd.supabase.co:6543/postgres?sslmode=require"
+    username: "postgres"
+    password: "gamelogson@@"
     driver-class-name: org.postgresql.Driver
 
   sql:
