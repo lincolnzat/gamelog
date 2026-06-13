@@ -3,9 +3,10 @@ server:
 
 spring:
   datasource:
-    platform: postgres
     url: ${SPRING_DATASOURCE_URL}
-    driverClassName: org.postgresql.Driver
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
 
   sql:
     init:
