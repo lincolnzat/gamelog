@@ -6,9 +6,9 @@ spring:
     active: prod
 
   datasource:
-    url: jdbc:postgresql://db.ingjkgihejitvnhxsdxd.supabase.co:5432/postgres?sslmode=require
-    username: postgres
-    password: 'gamelogson@@'
+    url: jdbc:postgresql://aws-1-sa-east-1.pooler.supabase.com:5432/postgres?sslmode=require&prepareThreshold=0
+    username: postgres.ingjkgihejitvnhxsdxd
+    password: gamelogfatec
     driver-class-name: org.postgresql.Driver
 
   sql:
