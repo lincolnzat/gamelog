@@ -6,7 +6,7 @@ spring:
     active: prod
 
   datasource:
-    url: jdbc:postgresql://db.ingjkgihejitvnhxsdxd.supabase.co:6543/gamelog?sslmode=require&prepareThreshold=0
+    url: jdbc:postgresql://db.ingjkgihejitvnhxsdxd.supabase.co:5432/postgres?sslmode=require
     username: postgres
     password: 'gamelogson@@'
     driver-class-name: org.postgresql.Driver
