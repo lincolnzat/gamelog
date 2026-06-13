@@ -18,7 +18,7 @@ public class JogoService {
         return jdao.obterJogo(id);
     }
 
-    // Corrigido para bater com o método atualizado do JogoDAO
+
     public List<Jogo> obterTodosJogosPorUsuario(int usuarioId) {
         return jdao.obterTodosJogosPorUsuario(usuarioId);
     }

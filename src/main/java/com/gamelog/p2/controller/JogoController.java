@@ -19,7 +19,7 @@ public class JogoController {
     @Autowired
     private JogoService jogoService;
 
-    // 1. LISTAR OS JOGOS
+
     @GetMapping
     public String listarJogos(HttpSession session, Model model) {
         Usuario usuarioLogado = (Usuario) session.getAttribute("usuarioLogado");
@@ -38,7 +38,7 @@ public class JogoController {
         return "pagUser";
     }
 
-    // 2. INSERIR NOVO JOGO
+
     @PostMapping("/novo")
     public String inserirJogo(@ModelAttribute Jogo jogo, HttpSession session) {
         Usuario usuarioLogado = (Usuario) session.getAttribute("usuarioLogado");
@@ -53,9 +53,9 @@ public class JogoController {
         return "redirect:/jogos";
     }
 
-    // 3. CARREGAR DADOS PARA EDITAR
+
     @GetMapping("/editar/{id}")
-    public String exibirEdicao(@PathVariable("id") int id, HttpSession session, Model model) { // Corrigida a assinatura
+    public String exibirEdicao(@PathVariable("id") int id, HttpSession session, Model model) {
         Usuario usuarioLogado = (Usuario) session.getAttribute("usuarioLogado");
 
         if (usuarioLogado == null) {
@@ -73,9 +73,9 @@ public class JogoController {
         return "jogos-editar";
     }
 
-    // 4. ATUALIZAR JOGO
+
     @PostMapping("/atualizar/{id}")
-    public String atualizarJogo(@PathVariable("id") int id, @ModelAttribute Jogo jogo, HttpSession session) { // Corrigidas as vírgulas
+    public String atualizarJogo(@PathVariable("id") int id, @ModelAttribute Jogo jogo, HttpSession session) {
         Usuario usuarioLogado = (Usuario) session.getAttribute("usuarioLogado");
 
         if (usuarioLogado == null) {
@@ -90,9 +90,9 @@ public class JogoController {
         return "redirect:/jogos";
     }
 
-    // 5. DELETAR JOGO
+
     @GetMapping("/deletar/{id}")
-    public String deletarJogo(@PathVariable("id") int id, HttpSession session) { // Corrigida a assinatura
+    public String deletarJogo(@PathVariable("id") int id, HttpSession session) {
         Usuario usuarioLogado = (Usuario) session.getAttribute("usuarioLogado");
 
         if (usuarioLogado == null) {

@@ -1,6 +1,6 @@
 package com.gamelog.p2.model;
 
-// POJO
+
 
 import java.util.HashMap;
 
@@ -10,7 +10,7 @@ public class Usuario {
 
 
     public Usuario() {
-        //insert POJO
+
     }
 
     public Usuario(String nome, String email, String senha) {
@@ -18,10 +18,10 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
 
-        //POJO
+
     }
 
-    // select - VIRE POJO
+
 
     public Usuario (int id, String nome, String email, String senha) {
         this.id = id;
@@ -29,7 +29,7 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
 
-        //vire POJO!!!
+
     }
 
     public int getId() {
